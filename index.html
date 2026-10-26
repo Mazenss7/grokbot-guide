@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دليل المبتدئين إلى Grok Bot</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Tahoma,'Noto Kufi Arabic','Noto Sans Arabic',sans-serif;background:#f5f7fb;color:#2b2f38;line-height:1.9;font-size:16px}
+.wrap{max-width:820px;margin:0 auto;padding:20px 14px 40px}
+header{background:linear-gradient(135deg,#1e3a8a,#3b82f6);color:#fff;border-radius:18px;padding:28px 20px;text-align:center;margin-bottom:22px}
+header h1{font-size:1.7rem;margin-bottom:8px}
+header p{opacity:.92}
+h2.sec{color:#1d4ed8;font-size:1.3rem;margin:28px 4px 12px}
+.grid{display:grid;gap:14px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 10px rgba(30,58,138,.07);border:1px solid #e6ebf5}
+.card h3{color:#1d4ed8;font-size:1.08rem;margin-bottom:6px}
+.card .ic{font-size:1.5rem;margin-left:6px}
+.ex{background:#eef4ff;border-radius:10px;padding:8px 12px;margin-top:8px;font-size:.93rem;color:#334}
+ol.steps{list-style:none;counter-reset:s}
+ol.steps li{counter-increment:s;background:#fff;border:1px solid #e6ebf5;border-radius:12px;padding:12px 14px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
+ol.steps li::before{content:counter(s);background:#1d4ed8;color:#fff;border-radius:50%;min-width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-weight:bold}
+.prompt{background:#fff;border-right:4px solid #3b82f6;border-radius:10px;padding:12px 14px;margin-bottom:10px;border-top:1px solid #e6ebf5;border-bottom:1px solid #e6ebf5;border-left:1px solid #e6ebf5}
+.prompt b{color:#1d4ed8;display:block}
+ul.tips{background:#fff;border-radius:14px;padding:16px 34px 16px 16px;border:1px solid #e6ebf5}
+ul.tips li{margin-bottom:6px}
+footer{text-align:center;margin-top:30px;color:#5b6475;font-size:.95rem}
+code{font-family:inherit;direction:ltr;unicode-bidi:isolate}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>🤖 دليلك المبسط إلى Grok Bot</h1>
+<p>تعرف على مساعدك الذكي الذي يعمل نيابة عنك، خطوة بخطوة</p>
+</header>
+
+<h2 class="sec">🧭 ما الذي يقدمه Grok Bot؟</h2>
+<div class="grid">
+<div class="card"><h3><span class="ic">💡</span>ما هو Grok Bot؟</h3><p>مساعد ذكي له جهاز كمبيوتر خاص به، ينجز المهام عنك، وليس مجرد محادثة.</p></div>
+<div class="card"><h3><span class="ic">⏰</span>المهام المجدولة (Routines)</h3><p>تقارير وتذكيرات تعمل بشكل تلقائي في وقت تحدده أو عند وقوع حدث معين، حتى وأنت غائب.</p><div class="ex">مثال: تقرير صباحي يصلك كل يوم بأهم المستجدات.</div></div>
+<div class="card"><h3><span class="ic">👥</span>أكثر من بوت (Teammates)</h3><p>يمكنك إنشاء بوتات متخصصة، لكل واحد منها مهمة، وتتواصل فيما بينها.</p><div class="ex">مثال: بوت باحث يجمع المعلومات، وبوت مراجع جودة يدقق النتائج.</div></div>
+<div class="card"><h3><span class="ic">🧠</span>الذاكرة</h3><p>يتذكر تفضيلاتك وقواعدك من محادثة إلى أخرى، فلا تحتاج إلى تكرارها.</p></div>
+<div class="card"><h3><span class="ic">🔗</span>الربط بالأدوات (Connectors)</h3><p>يرتبط مع Gmail وX وCanva وغيرها، فيقرأ المحتوى ويجهز المسودات، وأي إرسال يتم بموافقتك.</p></div>
+<div class="card"><h3><span class="ic">🖥️</span>المتصفح والكمبيوتر الخاص</h3><p>يتصفح المواقع، ويعبئ النماذج، وينزل الملفات، وينشئ الجداول والملفات.</p></div>
+<div class="card"><h3><span class="ic">🔎</span>البحث والتحليل</h3><p>يبحث في الويب وفي X، ويحلل الفيديو والصور.</p></div>
+<div class="card"><h3><span class="ic">🎨</span>توليد الصور والفيديو</h3><p>ينشئ الصور ومقاطع الفيديو حسب وصفك.</p></div>
+<div class="card"><h3><span class="ic">📄</span>الصفحات (Pages)</h3><p>تقارير ولوحات تفاعلية يمكنك مشاركتها مع غيرك.</p></div>
+<div class="card"><h3><span class="ic">📱</span>الجوال</h3><p>تستطيع ضبط المنبه والتذكير ومواعيد التقويم من جوالك.</p></div>
+<div class="card"><h3><span class="ic">🔒</span>الأمان</h3><p>يطلب إذنك قبل الإرسال أو الشراء أو الحذف، ولا يطلب كلمات المرور داخل المحادثة.</p></div>
+</div>
+<h2 class="sec">🚀 كيف تبدأ في 5 خطوات</h2>
+<ol class="steps">
+<li><div><b>اكتب طلبك بوضوح:</b> اشرح ما تريده بجمل بسيطة ومحددة.</div></li>
+<li><div><b>حدد المخرج:</b> ملف، جدول، صفحة، أو ملخص قصير.</div></li>
+<li><div><b>اطلب جدولته إذا كان يتكرر:</b> مثل تقرير كل صباح.</div></li>
+<li><div><b>اربط أدواتك:</b> مثل Gmail وX وCanva ليعمل عليها مباشرة.</div></li>
+<li><div><b>راجع وعدّل:</b> اطلب التعديل حتى تصل إلى النتيجة التي تريدها.</div></li>
+</ol>
+<h2 class="sec">✨ أفكار جاهزة للاستخدام</h2>
+<div class="prompt"><b>📰 تقرير أخبار يومي</b>«أرسل لي كل يوم الساعة السابعة في الصباح ملخص أهم أخبار الذكاء الاصطناعي مع روابط المصادر.»</div>
+<div class="prompt"><b>📧 مراجعة البريد</b>«راجع بريدي في Gmail ولخص الرسائل المهمة، وجهز مسودات للرد عليها دون إرسال.»</div>
+<div class="prompt"><b>🎯 بحث الفرص</b>«ابحث عن فرص تدريب في مجال الذكاء الاصطناعي في السعودية، ورتبها في جدول.»</div>
+<div class="prompt"><b>🔔 تذكير</b>«ذكرني يوم الخميس القادم بتجهيز عرض الورشة.»</div>
+<div class="prompt"><b>🎬 تلخيص فيديو</b>«لخص هذا الفيديو في نقاط واضحة مع أهم الأفكار: [الرابط]»</div>
+<div class="prompt"><b>🧑‍🏫 تحضير ورشة</b>«جهز لي خطة ورشة مدتها ساعتان عن أساسيات الذكاء الاصطناعي للمعلمين، مع تمارين تطبيقية.»</div>
+<h2 class="sec">📌 نصائح</h2>
+<ul class="tips">
+<li>ابدأ بمهمة صغيرة لتتعرف على طريقة عمله.</li>
+<li>استخدم المهام المجدولة (Routines) للأعمال المتكررة.</li>
+<li>تأكد من المصادر قبل الاعتماد على أي معلومة.</li>
+</ul>
+<footer>إعداد: AI Solutions Edu ‏@aisolutionsedu</footer>
+</div>
+</body>
+</html>
